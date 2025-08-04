@@ -1,0 +1,193 @@
+/* General Body Styles & Font Import */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F9FAFB; /* bg-gray-50 */
+    color: #1F2937; /* text-gray-800 */
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Container to center content and add padding */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* px-6 */
+    padding-right: 1.5rem; /* px-6 */
+}
+
+/* --- Header & Navigation --- */
+.header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem; /* py-4 */
+    padding-bottom: 1rem; /* py-4 */
+}
+
+.logo {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+    color: #2563EB; /* text-blue-600 */
+    text-decoration: none;
+}
+
+.desktop-nav {
+    display: none; /* Hidden on mobile */
+}
+
+.desktop-nav a {
+    color: #4B5563; /* text-gray-600 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.desktop-nav a:hover {
+    color: #2563EB; /* hover:text-blue-600 */
+}
+
+.mobile-menu-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4B5563; /* text-gray-600 */
+}
+
+.mobile-menu-button .fa-bars {
+    font-size: 1.5rem; /* text-2xl */
+}
+
+.mobile-nav a {
+    display: block;
+    padding: 0.5rem 1.5rem; /* py-2 px-6 */
+    font-size: 0.875rem; /* text-sm */
+    color: #4B5563; /* text-gray-600 */
+    text-decoration: none;
+}
+
+.mobile-nav a:hover {
+    background-color: #EFF6FF; /* hover:bg-blue-50 */
+}
+
+
+/* --- Hero Section --- */
+.hero-section {
+    background-color: #2563EB; /* bg-blue-600 */
+    color: #ffffff;
+    padding: 6rem 0; /* py-24 */
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 700; /* font-bold */
+    line-height: 1.2; /* leading-tight */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.hero-content p {
+    font-size: 1.125rem; /* text-lg */
+    color: #DBEAFE; /* text-blue-100 */
+    margin-bottom: 2rem; /* mb-8 */
+    max-width: 42rem; /* max-w-2xl */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    background-color: #ffffff;
+    color: #2563EB; /* text-blue-600 */
+    font-weight: 700; /* font-bold */
+    padding: 0.75rem 2rem; /* py-3 px-8 */
+    border-radius: 9999px; /* rounded-full */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #F3F4F6; /* hover:bg-gray-100 */
+    transform: scale(1.05);
+}
+
+
+/* --- Footer Section --- */
+.footer {
+    background-color: #1F2937; /* bg-gray-800 */
+    color: #ffffff;
+    padding: 2rem 0; /* py-8 */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
+    font-size: 0.875rem; /* text-sm */
+    color: #9CA3AF; /* text-gray-400 */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links a {
+    color: #9CA3AF; /* text-gray-400 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 0.5rem; /* space-x-4 equivalent */
+    font-size: 1.25rem; /* fa-lg */
+}
+
+.social-links a:hover {
+    color: #ffffff; /* hover:text-white */
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+/* Medium screens and up (md breakpoint: 768px) */
+@media (min-width: 768px) {
+    .desktop-nav {
+        display: flex;
+        gap: 1.5rem; /* space-x-6 */
+    }
+
+    .mobile-menu-button {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none !important; /* Ensure mobile nav is hidden on desktop */
+    }
+
+    .hero-content h1 {
+        font-size: 3.75rem; /* md:text-6xl */
+    }
+
+    .hero-content p {
+        font-size: 1.25rem; /* md:text-xl */
+    }
+    
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .footer-content p {
+        margin-bottom: 0;
+    }
+}
